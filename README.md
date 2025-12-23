@@ -11,6 +11,8 @@ C'est mon tout premier code en python et qui me permet d'apprendre et progresser
 - Vérifie la présence d'au moins un chiffre
 - Calcule un score de sécurité 
 - Affiche si le mot de passe est accepté ou refusé 
+- Créer un fichier automatiquement et enregistre les mots de passe en clair 
+- Créer une boucle temps que le mots de passe ne correspond pas aux critères 
  
  ### Comment l'utiliser 
  1. Clonner le dépôt GitHub ou télécharger le fichier.
