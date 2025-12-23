@@ -1,0 +1,12 @@
+# PyInstaller
+build/
+dist/
+*.spec
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Fichiers de mots de passe sensibles
+mot_de_passe_valides.txt
+mdp_valides.txt
