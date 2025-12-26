@@ -1,52 +1,73 @@
-# Vérificateur de mot de passe sécurisé V1.1.0
+# Gestionnaire de mots de passe sécurisé V2.0.0
+
 ## Projet pour portfolio cybersécurité débutant python
 
-Ce projet est un vérificateur et générateur de mots de passe sécurisés.
-Il permet à un utilisateur de :
-- Créer des mots de passe robustes
-- Vérifier leur sécurité selon plusieurs critères
-- Eviter la réutilisation de mots de passe
-- Enregistrer les mots de passe validés dans un fichier local
-- Le programme fonctionne en ligne de commande et peut être transformé en exécutable (.exe) pour Windows.
+Cette mise à jour marque la fin de la première version en ligne de commande et introduit une version complètement graphique et sécurisée. 
+
+Le programme permet désormais à un utilisateur de : 
+
+- Créer un compte avec mot de passe maître
+- Ajouter, gérer et supprimer des mots de passes pour différents sites.
+- Générer automatiquement des mots de passe sécurisés.
+- Tout est stocké de manière sécurisée dans une base de données SQLite.
+
 ### Fonctionnalités
-1. Vérification du mot de passe :
-- Longueur minimale : 8 caractères.
-- Doit contenir au moins une majuscule, un chiffre et un caractère spécial.
-- Score de sécurité basé sur ces critères (max 100 points).
-- Vérifie si le mot de passe est trop commun ou déjà utilisé.
-- Possibilité d'ajouter plusieurs comptes
-- Delais de 6 secondes avant la fermeture du programme
+1. Gestion des comptes utilisateurs
+    - Création de compte avec mot de passe maître
+    - Connexion sécurisée avec vérification du mot de passe maître.
+    - Les mots de passe des utilisateurs sont stockés sous forme hachée.
 
-2. Génération automatique de mots de passe :
-- Peut générer un mot de passe aléatoire de 12 caractères (modifiable).
-- Garantit au moins une majuscule, un chiffre et un caractère spécial.
+2. Gestion de mots de passe :
+    - Ajouter des mots de passe pour différents sites avec identifiant associé.
+    - Suppression de mots de passe existants.
+    - Affichage et copie sécurisée dans le presse papier.
+    - Génération de mots de passe aléatoires robustes.
+    - Recherche de sites pour filtrer facilement la liste des mots de passe.
 
-3. Enregistrement sécurisé :
-- Les mots de passe valides sont stockés dans un fichier texte avec le site et l’utilisateur :
-site | utilisateur | mot_de_passe
-- Affiche le chemin complet du fichier
+3. Sécurité :
+    - Les mots de passe sont chiffrés avec le mot de passe maître avant stockage dans la base SQLite
+    - Vérification automatique des critères de sécurité:
+        - Longueur minimal de 8 caractères
+        - Contient au moins une majuscule, un chiffre et un caractère spécial
+        - Score de sécurité minimal
+    - Protection contre réutilisation de mots de passe.
+
+4. Interface graphique : 
+    - Développé avec Tkinter pour une utilisation intuitive.
+    - Affichage clair des mots de passe et informations associées.
+    - Icône personnalisée pour l'application une fois transformé en .exe.
 
  ### Comment l'utiliser 
  1. Clonner le dépôt GitHub ou télécharger le fichier.
- 2. Ouvrir le fichier 'psdw.py' dans VS Code.
- 3. Exécuter le programme.
- 4. Saisir un mot de passe pour tester sa sécurité. 
+ 2. Installer les dépendances Python nécessaires :
+    - pip install pycryptodome
+ 3. Lancer le programme avec Python : 
+    - python gui.py
+ 4. Créer un utilisateur ou se connecter avec un mot de passe maître existant.
+ 5. Ajouter, générer, copier et gérer vos mots de passe via l’interface graphique.
+
+ #### Instalation .EXE
+  - Téléchargez le .exe directement depuis [GitHub Releases](https://github.com/IjustStartPython/pswd/releases/tag/FinProjet), ou généré via PyInstaller.
+  - Double-cliquer sur l'icône pour lancer le programme.
+  - Créer un utilisateur ou se connecter avec le mot de passe maître.
+  - L'interface permet de gérer vos mots de passe sans aucune ligne de commande. 
 
  ### Technologies 
  - Python 3
  - VS code
  - Fichier communmdp.txt (liste de mots de passe communs, un par ligne).
- - Permissions d’écriture pour créer/ouvrir mot_de_passe_valides.txt.
+ - Tkinter (interface graphique)
+ - SQLite pour la base de données sécurisée
+ - PyCryptodome pour le chiffrement des mots de passe
 
  ### Lien avec la cybersécurité
- Ce programme simule un contrôle de sécurité des mots de passe, ce qui est une compétence clé pour un futur étudiant dans ce domaine comme moi.
+    Ce projet simule un gestionnaire de mots de passe sécurisé, ce qui est une compétence clé dans la protection des données et la cybersécurité
 
  ### Amélioration possibles :
- - Chiffrement des mots de passe
- - Enregistrement automatique dans un le dosssier documents
- - Interface graphique (Tkinter)
- - Gestion des comptes existants
- - Mot de passe maître 
+ - CSynchronisation avec le cloud pour accès multi-appareils.
+ - Notifications pour mot de passe faible ou expiré.
+ - Thème sombre pour l’interface graphique.
+ - Export/import sécurisé des mots de passe. 
 
  ## Auteur
  Projet réalisé par IjustStartPython 

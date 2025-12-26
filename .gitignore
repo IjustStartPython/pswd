@@ -1,12 +1,54 @@
+# ================================
+# Python
+# ================================
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.py[cod]
+*.so
+*.egg-info/
+*.egg
+
+# ================================
+# Environnements
+# ================================
+env/
+venv/
+ENV/
+.venv/
+
+# ================================
 # PyInstaller
+# ================================
 build/
 dist/
 *.spec
 
-# Python cache
-__pycache__/
-*.pyc
+# ================================
+# Base de données et fichiers utilisateurs
+# ================================
+users/
+password_manager.db
 
-# Fichiers de mots de passe sensibles
-mot_de_passe_valides.txt
-mdp_valides.txt
+# ================================
+# Logs, temporaires
+# ================================
+*.log
+*.tmp
+*.bak
+
+# ================================
+# IDE et éditeurs
+# ================================
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+*.DS_Store
+
+# ================================
+# Icônes et ressources temporaires
+# ================================
+*.ico~
+*.icns~
